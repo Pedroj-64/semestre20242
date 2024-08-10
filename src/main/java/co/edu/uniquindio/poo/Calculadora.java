@@ -1,3 +1,5 @@
+package co.edu.uniquindio.poo;
+
 import java.util.Locale;
 import java.util.Scanner;
 
