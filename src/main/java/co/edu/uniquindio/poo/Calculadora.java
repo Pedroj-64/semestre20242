@@ -7,15 +7,16 @@ public class Calculadora {
 
     @SuppressWarnings("resource")
     public static void main(String[] args) {
-
+        double num1 = 0;
+        double num2 = 0;
+        double resultado = 0;
+        
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
         
         System.out.println("Por favor ingrese qué operación desea hacer: \n 1. Suma \n 2. Restar \n 3. Multiplicar \n 4. Dividir");
         int opcion = entrada.nextInt();
         
-        double num1 = 0;
-        double num2 = 0;
 
         if (opcion >= 1 && opcion <= 4) {
             System.out.println("Por favor ingrese el primer número");
@@ -25,11 +26,7 @@ public class Calculadora {
             num2 = entrada.nextDouble();
 
 
-            if (num1 == 0 || num2 == 0) {
-                throw new IllegalArgumentException("No es posible usar el 0 en ninguna operación");
-            }
-
-            double resultado = 0;
+            
             if (opcion == 1) {
                 resultado = sumar(num1, num2);
             } else if (opcion == 2) {
@@ -61,6 +58,9 @@ public class Calculadora {
     }
 
     public static double dividir(double num1, double num2) {
+        if (num2 == 0) {
+            throw new IllegalArgumentException("No es posible usar el 0 en ninguna operación");
+        }
         return num1 / num2;
     }
 }
