@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class Calculadora {
 
-    @SuppressWarnings("resource")
     public static void main(String[] args) {
         double num1 = 0;
         double num2 = 0;
