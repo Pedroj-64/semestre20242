@@ -32,7 +32,8 @@ public class HojaDeVida {
 
     public static String generarMensaje(String datosString[], int edad) {
         String mensaje = "Bienvenido su hoja de vida con los datos consignados seria asi:\n" + "Nombre:"
-                + datosString[0] + "\nEdad=" + edad + "\nExperiencia laboral: " + datosString[1] + "\nTiempo disponible: "
+                + datosString[0] + "\nEdad=" + edad + "\nExperiencia laboral: " + datosString[1]
+                + "\nTiempo disponible: "
                 + datosString[2] + "\nSalario deseado: " + datosString[3];
         return mensaje;
     }
@@ -42,10 +43,10 @@ public class HojaDeVida {
     }
 
     public static void main(String[] args) {
-        Scanner entrada=new Scanner(System.in);
-        String[] info=datos(entrada);
-        int infoNum=datosNumerico(entrada);
-        String mensaje=generarMensaje(info, infoNum);
+        Scanner entrada = new Scanner(System.in);
+        String[] info = datos(entrada);
+        int infoNum = datosNumerico(entrada);
+        String mensaje = generarMensaje(info, infoNum);
         mostrarMensaje(mensaje);
         entrada.close();
     }
