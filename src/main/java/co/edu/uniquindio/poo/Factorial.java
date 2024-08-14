@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Factorial {
 
     public static int newFactorial(Scanner entrada){
-        System.out.println("ingrese el numero del cual quiere saber su factorial");
+        System.out.println("ingrese el numero del cual quiere saber su factorial: ");
         int facto=entrada.nextInt();
         return facto;
 
@@ -13,7 +13,7 @@ public class Factorial {
     public static int calcularFactorial(int facto) {
         int resultado = 1;
         for (int i = facto; i > 0; i--) {
-            resultado *= i;
+            resultado *= i;//es lo mismo que decir resultado=resultado*i
         }
         return resultado;
     }

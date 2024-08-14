@@ -22,8 +22,7 @@ public class Calculadora_1 {
         return result;
     }
 
-    public static int entradaScanner() {
-        Scanner entrada = new Scanner(System.in);
+    public static int entradaScanner(Scanner entrada) {
         System.out.println(
                 "Por favor ingrese qué operación desea hacer: \n 1. Suma \n 2. Restar \n 3. Multiplicar \n 4. Dividir");
         int opcion = entrada.nextInt();
@@ -52,15 +51,13 @@ public class Calculadora_1 {
         return result;
     }
 
-    public static double entradaNumerica1() {
-        Scanner entrada = new Scanner(System.in);
+    public static double entradaNumerica1(Scanner entrada) {
         System.out.println("Por favor ingresar el primer numero a operar:");
         double num1 = entrada.nextDouble();
         return num1;
     }
 
-    public static double entradaNumerica2() {
-        Scanner entrada = new Scanner(System.in);
+    public static double entradaNumerica2(Scanner entrada) {
         System.out.println("Por favor ingresar el segundo numero a operar:");
         double num2 = entrada.nextDouble();
         return num2;
@@ -124,9 +121,9 @@ public class Calculadora_1 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        int opcion = entradaScanner();
-        double num1 = entradaNumerica1();
-        double num2 = entradaNumerica2();
+        int opcion = entradaScanner(entrada);
+        double num1 = entradaNumerica1(entrada);
+        double num2 = entradaNumerica2(entrada);
 
         double calc = calculadora(opcion, num1, num2);
         String mensaje = generarMensaje(num1, num2, calc);
