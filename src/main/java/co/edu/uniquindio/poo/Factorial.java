@@ -10,14 +10,14 @@ public class Factorial {
         return facto;
 
     }
-    public static int calcularFactorial(int facto) {
-        int resultado = 0;
+    public static long calcularFactorial(int facto) {
+        long resultado = 1;
         for (int i = facto; i > 0; i--) {
             resultado *= i;//es lo mismo que decir resultado=resultado*i
         }
         return resultado;
     }
-    public static String generarMensaje(int num1, int resultado) {
+    public static String generarMensaje(int num1, long resultado) {
         String mensaje = "El resultado de tu factorial del numero " + num1 +  " es de: " + resultado;
         return mensaje;
     }
@@ -30,7 +30,7 @@ public class Factorial {
     public static void main(String[] args) {
         Scanner entrada=new Scanner(System.in);
         int factorial=newFactorial(entrada);
-        int resultado=calcularFactorial(factorial);
+        long resultado=calcularFactorial(factorial);
         String mensaje=generarMensaje(factorial, resultado);
         mostrarMensaje(mensaje);
         entrada.close();
