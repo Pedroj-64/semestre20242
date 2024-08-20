@@ -11,7 +11,7 @@ public class Factorial {
 
     }
     public static int calcularFactorial(int facto) {
-        int resultado = 1;
+        int resultado = 0;
         for (int i = facto; i > 0; i--) {
             resultado *= i;//es lo mismo que decir resultado=resultado*i
         }
